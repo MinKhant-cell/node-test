@@ -1,0 +1,20 @@
+{
+  "name": "node-test",
+  "version": "1.0.0",
+  "description": "A demo project for Node.js with testing and GitHub Actions",
+  "main": "main.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "nodejs",
+    "testing",
+    "jest",
+    "github-actions"
+  ],
+  "author": "Min Khant",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^30.0.0"
+  }
+}
