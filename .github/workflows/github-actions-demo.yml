@@ -6,15 +6,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-      - name: List files in the repository
-        run: |
-          ls ${{ github.workspace }}
-      - name: Display GitHub Context Variables
-        run: |
-          echo "Actor: ${{ github.actor }}"
-          echo "Repository: ${{ github.repository }}"
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
       - name: Install dependencies
         run: npm install
       - name: Run tests
         run: npm test
-      - run: echo "🍏 This job's status is ${{ job.status }}."
+      - run: echo "✅ This job's status is ${{ job.status }}."
